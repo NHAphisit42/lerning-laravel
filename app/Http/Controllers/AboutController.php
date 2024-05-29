@@ -10,6 +10,7 @@ class AboutController extends Controller
         $address = "4 กรุงเทพมหานคร ประเทศไทย";
         $tel = "0928885608";
         $email = "nhcomsci61@gmail.com";
-        return view("about",["address"=>$address, 'tel'=>$tel, 'email'=>$email]);
+        // return view("about",["address"=>$address, 'tel'=>$tel, 'email'=>$email]);
+        return view('about',compact('address','tel','email'));
     }
 }   
