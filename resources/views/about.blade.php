@@ -10,6 +10,9 @@
 
 <body>
     <h2>เกี่ยวกับเรา</h2>
+    <h3>{{$address}}</h3>
+    <h3>{{$tel}}</h3>
+    <h3>{{$email}}</h3>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum dolores quidem quam, magni, reiciendis in ab
         praesentium sequi ut recusandae minima sit accusantium rerum dicta at cumque expedita aliquid dolorum?</p>
         <a href="{{url('/')}}">home</a>
