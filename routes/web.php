@@ -23,8 +23,16 @@ Route::get('/about', function () {
     echo "<h1>Hello</h1>";
 });
 
-Route::get("/user", function () {
-    echo "Hello Naihot";
+// Route::get("/user", function () {
+//     echo "Hello Naihot";
+//     echo "<br>";
+//     echo "hello laravel 8";
+// });
+
+// Dynamic route
+Route::get("/user/{fname}/{lname}", function ($fname, $lname) {
+    echo "Hello : $fname";
+    echo "Hello : $lname";
     echo "<br>";
     echo "hello laravel 8";
 });
