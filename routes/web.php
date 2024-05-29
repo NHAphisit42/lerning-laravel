@@ -19,9 +19,9 @@ Route::get('/', function () {
 
 
 // การสร้าง Route
-Route::get('/about', function () {
-    echo "<h1>Hello</h1>";
-});
+// Route::get('/about', function () {
+//     echo "<h1>Hello</h1>";
+// });
 
 // Route::get("/user", function () {
 //     echo "Hello Naihot";
@@ -30,9 +30,22 @@ Route::get('/about', function () {
 // });
 
 // Dynamic route
-Route::get("/user/{fname}/{lname}", function ($fname, $lname) {
-    echo "Hello : $fname";
-    echo "Hello : $lname";
-    echo "<br>";
-    echo "hello laravel 8";
+// Route::get("/user/{fname}/{lname}", function ($fname, $lname) {
+//     echo "Hello : $fname";
+//     echo "Hello : $lname";
+//     echo "<br>";
+//     echo "hello laravel 8";
+// });
+
+// การสร้าง Route View
+Route::get('/member', function () {
+    return view('member.index'); //paht ที่มีโฟลเดอร์ member
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/admin', function () {
+    return view('admin.index'); //paht ที่มีโฟลเดอร์ admin
 });
