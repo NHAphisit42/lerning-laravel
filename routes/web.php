@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// การสร้าง Route
+Route::get('/about', function () {
+    echo "<h1>Hello</h1>";
+});
+
+Route::get("/user", function () {
+    echo "Hello Naihot";
+    echo "<br>";
+    echo "hello laravel 8";
+});
