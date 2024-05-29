@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\MemberController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,14 +41,6 @@ Route::get('/', function () {
 // });
 
 // การสร้าง Route View
-Route::get('/member', function () {
-    return view('member.index'); //paht ที่มีโฟลเดอร์ member
-});
-
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/admin', function () {
-    return view('admin.index'); //paht ที่มีโฟลเดอร์ admin
-});
+Route::get('/member', [MemberController::class, 'index']);
+Route::get('/about', [AboutController::class,'showData']);
+Route::get('/admin', [AdminController::class,'index']);
