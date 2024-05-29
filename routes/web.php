@@ -41,6 +41,6 @@ Route::get('/', function () {
 // });
 
 // การสร้าง Route View
-Route::get('/member', [MemberController::class, 'index']);
-Route::get('/about', [AboutController::class,'showData']);
-Route::get('/admin', [AdminController::class,'index']);
+Route::get('/member', [MemberController::class, 'index'])->name('member');
+Route::get('/about', [AboutController::class,'index'])->name('about');
+Route::get('/admin', [AdminController::class,'index'])->name('admin');

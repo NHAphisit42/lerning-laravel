@@ -27,6 +27,11 @@
         @foreach ($arrayName as $menu)
             <a href="">{{$menu}}</a>
         @endforeach
+        <br>
+        <a href="{{url('/')}}">home</a>
+        <a href="{{route('admin')}}">admin</a>
+        <a href="{{route('member')}}">member</a>
+        <a href="{{route('about')}}">about</a>
 </body>
 
 </html>
