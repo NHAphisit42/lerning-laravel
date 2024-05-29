@@ -9,10 +9,24 @@
 </head>
 
 <body>
-    <h2>ยินดีต้อนรับ admin</h2>
+    <?php
+        $user = "Naihot";    
+        $arrayName = array("home", "member", "about");
+    ?>
+    <h2>ยินดีต้อนรับ admin {{$user}}</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quae voluptatum, modi doloremque corrupti
         deserunt, dolores dignissimos voluptas nihil maxime enim non cumque sunt. Doloribus velit qui cumque inventore
         voluptas.</p>
+
+        @if ($user == "Naihot")
+            <h3>ผู้ใช้ท่านเป็น admin</h3>
+        @else
+        <h3>ผู้ใช้ท่านไม่ได้เป็น admin</h3>
+        @endif
+
+        @foreach ($arrayName as $menu)
+            <a href="">{{$menu}}</a>
+        @endforeach
 </body>
 
 </html>
